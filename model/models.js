@@ -11,8 +11,8 @@ const Schema = mongoose.Schema({
     },
     Empemail: {
         type: String,
-        required: true,
-        unique: true
+        required: true
+        // unique: true
     },
     EmpContactNo: {
         required: true,
