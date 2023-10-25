@@ -154,7 +154,7 @@ router.post('/signin',(req,res) => {
     
         try {
             await user.save();
-            res.status(200).json({
+            res.status(201).json({
                 message: 'New user signed up',
                 data: {
                     Username    : req.body.Username,
