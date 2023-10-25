@@ -48,7 +48,7 @@ router.post('/signin',(req,res) => {
     })    
     
 });
-// const emailCount = require('../model/models.js');
+ const emailCount = require('../model/models.js');
 
     // router.post('/register',async (req,callback) => {
     //     // var cryptr = new Cryptr('Employee');
