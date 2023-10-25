@@ -157,8 +157,8 @@ router.post('/signin',(req,res) => {
                 data: {
                     Empname    : req.body.Empname,
                     Empid        : req.body.Empid,
-                    EmpContactNo : req.body.EmpContactNo,
                     Empemail     : req.body.Empemail,
+                     EmpContactNo : req.body.EmpContactNo,
                     AddressLine1 : req.body.AddressLine1,
                     AddressLine2 : req.body.AddressLine2,
                     Pincode      : req.body.Pincode,
