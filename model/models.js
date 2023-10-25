@@ -5,10 +5,6 @@ const Schema = mongoose.Schema({
         required: true,
         type: String
     },
-    // Lastname: {
-    //     required: true,
-    //     type: String
-    // },
     Empid: {
         required: false,
         type: String
