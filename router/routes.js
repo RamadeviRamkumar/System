@@ -20,22 +20,20 @@ router.post('/signin',(req,res) => {
             })
         }
         else {
-            var dec = cryptr.decrypt(user.password);
+            var dec = cryptr.decrypt(user.Password);
+//             console.log(req.body.Password);
 //             console.log(req.body.password);
-//             console.log(req.body.password);
-            var enc = cryptr.encrypt(req.body.password);
+            var enc = cryptr.encrypt(req.body.Password);
             //  var dec = cryptr.decrypt(enc);
             user.save(function (err){
-            if (req.body.password === dec) {
+            if (req.body.Password === dec) {
                 return res.status(201).send({
                     message : "Signin Successfully",
                     data: {
-                        // firstName : req.body.firstName,
-                        // lastName  : req.body.lastName,
-                        Username  : req.body.Username,
-                        // email     : req.body.email,
-                        mobile    : req.body.mobile,
-                        password  : enc
+                        Empname  : req.body.Empname,
+                        Empemail     : req.body.Empemail,
+                       EmpContactNo    : req.body.EmpContactNo,
+                        Password  : enc
                     }
                 })
             }
@@ -157,8 +155,7 @@ router.post('/signin',(req,res) => {
             res.status(201).json({
                 message: 'New user signed up',
                 data: {
-                    Username    : req.body.Username,
-                    // Lastname     : req.body.Lastname,
+                    Empname    : req.body.Empname,
                     Empid        : req.body.Empid,
                     EmpContactNo : req.body.EmpContactNo,
                     Empemail     : req.body.Empemail,
