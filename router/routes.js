@@ -136,7 +136,7 @@ router.post('/signin',(req,res) => {
         var dec = cryptr.decrypt(enc);
     
         var user = new user_Signup();
-        user.Username = req.body.Username;
+        user.Empname = req.body.Empname;
         user.Empid = req.body.Empid;
     user.Empemail = req.body.Empemail;
     user.EmpContactNo = req.body.EmpContactNo;
